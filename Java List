@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        LinkedList <Integer> l= new LinkedList<Integer>();
+        int N;
+        Scanner sc =new Scanner(System.in);
+        N=sc.nextInt();
+        for(int i=0;i<N;i++){
+            l.add(sc.nextInt());
+        }
+        int Q;
+        Q=sc.nextInt();
+        for(int i=0;i<Q;i++){
+            String query = sc.next();
+            if(query.equals("Insert")){
+                int index=sc.nextInt();
+                int data=sc.nextInt();
+                l.add(index,data);
+            }
+            else{
+                int idx=sc.nextInt();
+                l.remove(idx);
+            }
+        }
+        sc.close();
+        for(Integer i:l){
+            System.out.print(i+" ");
+
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
